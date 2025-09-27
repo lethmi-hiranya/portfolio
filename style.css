@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #22223b;
+    color: #f2e9e4;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+nav {
+    background: #4a4e69;
+    text-align: center;
+    padding: 0.7rem 0;
+}
+nav a {
+    color: #f2e9e4;
+    margin: 0 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    max-width: 750px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(34,34,34,0.07);
+    padding: 2rem;
+}
+section {
+    margin-bottom: 2rem;
+}
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.project {
+    background: #f2e9e4;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1 1 220px;
+    box-shadow: 0 2px 8px rgba(34,34,34,0.04);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+button {
+    background: #9a8c98;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100px;
+}
+button:hover {
+    background: #4a4e69;
+}
+#formMessage {
+    margin-top: 0.6rem;
+    color: #22223b;
+    font-size: 1rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #c9ada7;
+    color: #22223b;
+    margin-top: 3rem;
+}
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+    .project-list {
+        flex-direction: column;
+    }
+}
