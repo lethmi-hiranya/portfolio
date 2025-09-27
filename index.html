@@ -2,60 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lethmi Hiranya - Portfolio</title>
+    <title>Lethmi Hiranya | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Lethmi Hiranya</h1>
-        <p>Web Developer | Designer | Tech Enthusiast</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">Lethmi<span>Hiranya</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hi! I'm Lethmi, a creative web developer passionate about building beautiful and functional web applications.
-                I love learning new technologies and collaborating on innovative projects.
-            </p>
-        </section>
-        <section id="projects">
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <div>
+                <h1>Hello, I'm <span>Lethmi Hiranya</span></h1>
+                <p class="subtitle">Web Developer • Designer • Tech Enthusiast</p>
+                <a href="#projects" class="cta-btn">View My Projects</a>
+            </div>
+            <img src="https://avatars.githubusercontent.com/u/16662661?v=4" alt="Profile" class="hero-img">
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <div class="container about-content">
+            <div>
+                <h2>About Me</h2>
+                <p>
+                    I'm a passionate web developer with experience in creating modern, responsive websites and web apps.
+                    I enjoy working with HTML, CSS, JavaScript, and love learning new frameworks and technologies.
+                </p>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3 / SASS</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects-section">
+        <div class="container">
             <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project">
-                    <h3>Personal Portfolio</h3>
-                    <p>A responsive website to showcase my skills and work.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://source.unsplash.com/400x250/?website,code" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Modern Portfolio</h3>
+                        <p>Personal portfolio website with dark mode, responsive design, and animated project cards.</p>
+                        <a href="#" class="project-link" target="_blank">Live Demo</a>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Weather App</h3>
-                    <p>An app that displays current weather using a public API.</p>
+                <div class="project-card">
+                    <img src="https://source.unsplash.com/400x250/?app,weather" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>Weather forecast web app built with open APIs and modern JavaScript practices.</p>
+                        <a href="#" class="project-link" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://source.unsplash.com/400x250/?dashboard,analytics" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Interactive dashboard visualizing data in real time using Chart.js and REST APIs.</p>
+                        <a href="#" class="project-link" target="_blank">Live Demo</a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section id="contact">
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="container">
             <h2>Contact</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" required></textarea>
-                
-                <button type="submit">Send</button>
-                <p id="formMessage"></p>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name <span>*</span></label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message <span>*</span></label>
+                    <textarea id="message" name="message" required rows="5"></textarea>
+                </div>
+                <button type="submit" class="cta-btn">Send Message</button>
+                <p id="formMessage" class="form-message"></p>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
     <footer>
-        <p>&copy; 2025 Lethmi Hiranya</p>
+        <div class="container">
+            <p>© 2025 Lethmi Hiranya. Built with 💻 and ☕</p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
